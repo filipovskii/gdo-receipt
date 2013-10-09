@@ -10,23 +10,55 @@
       media="screen"
       charset="utf-8">
 
-    <script src="js/pdfjs.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="js/main.js"></script>
   </head>
 
   <body>
-    <div>
-      <form id="data">
-        <textarea
-          name="list"
-          placeholder="Имена"></textarea>
 
-        <button type="submit" name="generate">Создать</button>
-      </form>
-    </div>
+    <form id="data">
+      <div class="row">
+        <div class="col-100">
+          <select name="month">
+            <option>январь</option>
+            <option>февраль</option>
+            <option>март</option>
+            <option>апрель</option>
+            <option>май</option>
+            <option>июнь</option>
+            <option>июль</option>
+            <option>август</option>
+            <option>сентябрь</option>
+            <option>октябрь</option>
+            <option>ноябрь</option>
+            <option>декабрь</option>
+          </select>
 
-    <div>
-      <!--iframe id="preview"></iframe-->
-    </div>
+          <input name="amount"
+            type="number"
+            step="0.10" min="0"
+            placeholder="сумма">
+
+          <button type="submit" name="generate" disabled>
+            Создать квитанции
+          </button>
+          <button name="print" disabled>Распечатать/Сохранить</button>
+        </div>
+      </div>
+
+      <div class="row fill-height">
+        <div class="col-50">
+          <textarea
+            name="list"
+            placeholder="Список имен, каждое с новой строки"></textarea>
+        </div>
+
+        <div class="col-50">
+          <iframe id="preview" name="preview"></iframe>
+        </div>
+      </div>
+
+    </form>
+
   </body>
 </html>
