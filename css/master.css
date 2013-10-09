@@ -1,0 +1,49 @@
+html, body, form {
+  height: 100%;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+div.row {
+  margin-top: 20px;
+}
+
+div.row:after {
+  clear: both;
+}
+
+div.row > div.col-50 {
+  width: 50%;
+  float: left;
+  padding-left: 20px;
+}
+
+div.row > div.col-50:last-child {
+  padding-right: 20px;
+}
+
+div.row > div.col-100 {
+  width: 100%;
+  padding-left: 20px;
+}
+
+div.fill-height, div.fill-height * {
+  height: 90%;
+}
+
+textarea {
+  width: 100%;
+  min-height: 90%;
+}
+
+iframe {
+  width: 100%;
+  height: 91%;
+  border: 1px solid #000;
+}
+
+input[type="number"] {
+  width: 100px;
+}
